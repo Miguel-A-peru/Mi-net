@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="MI NET, emprendimiento de productos artesanales y culturales de Puno, Perú.">
+
+    <title>MI NET | Productos de Puno</title>
+
+    <link rel="stylesheet" href="css/estilo.css">
+    <script src="js/validacion.js" defer></script>
+</head>
+
+<body>
+
+    <!-- ENLACE PARA SALTAR AL CONTENIDO (teclado y lectores de pantalla) -->
+    <a class="saltar" href="#contenido">Saltar al contenido principal</a>
+
+    <!-- ENCABEZADO -->
+    <header class="encabezado" id="inicio">
+
+        <a href="#inicio" class="logo">MI NET<span>.</span></a>
+
+        <!-- NAVEGACION -->
+        <nav class="navegacion" aria-label="Navegación principal">
+
+            <a href="#inicio">Inicio</a>
+            <a href="#nosotros">Nosotros</a>
+            <a href="#productos">Productos</a>
+            <a href="#contacto">Contacto</a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main id="contenido" tabindex="-1">
+
+        <!-- PORTADA -->
+        <section class="portada" aria-labelledby="titulo-principal">
+
+            <div class="portada-contenido">
+
+                <p class="etiqueta">ESENCIA DE PUNO - PERÚ</p>
+
+                <h1 id="titulo-principal">
+                    Tradición que se lleva contigo.
+                </h1>
+
+                <p>
+                    Descubre productos únicos inspirados en la cultura,
+                    creatividad y tradición de nuestra hermosa región
+                    de Puno.
+                </p>
+
+                <a href="#productos" class="boton">
+                    Descubrir productos
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- NOSOTROS -->
+        <section class="nosotros" id="nosotros">
+
+            <p class="etiqueta">NUESTRA IDENTIDAD</p>
+
+            <h2>Lo auténtico de nuestra tierra</h2>
+
+            <p>
+                En MI NET reunimos productos que representan la riqueza
+                cultural de Puno. Cada pieza refleja tradición,
+                creatividad y el trabajo de nuestra gente.
+            </p>
+
+        </section>
+
+
+        <!-- PRODUCTOS -->
+        <section class="productos" id="productos">
+
+            <div class="titulo-seccion">
+
+                <p class="etiqueta">NUESTRA COLECCIÓN</p>
+
+                <h2>Productos destacados</h2>
+
+            </div>
+
+
+            <div class="catalogo">
+
+                <!-- PRODUCTO UNO -->
+                <article class="producto">
+
+                    <img src="img/portada.jpg"
+                         alt="Paisaje y tradición artesanal de Puno">
+
+                    <div class="producto-contenido">
+
+                        <h3>Arte de nuestra tierra</h3>
+
+                        <p>
+                            Artesanía tradicional puneña.
+                        </p>
+
+                        <p class="precio">S/ 85.00</p>
+
+                        <a href="#contacto" class="enlace-producto">
+                            Consultar producto
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PRODUCTO DOS -->
+                <article class="producto">
+
+                    <img src="img/productos.jpg"
+                         alt="Textiles y productos artesanales andinos">
+
+                    <div class="producto-contenido">
+
+                        <h3>Esencia andina</h3>
+
+                        <p>
+                            Diseños con identidad regional.
+                        </p>
+
+                        <p class="precio">S/ 65.00</p>
+
+                        <a href="#contacto" class="enlace-producto">
+                            Consultar producto
+                        </a>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- CONTACTO: FORMULARIO PRINCIPAL -->
+        <section class="contacto" id="contacto" aria-labelledby="titulo-contacto">
+
+            <p class="etiqueta">ESTAMOS PARA TI</p>
+
+            <h2 id="titulo-contacto">Consulta o pide tus productos</h2>
+
+            <p class="contacto-intro">
+                Completa el formulario y te responderemos con el detalle
+                de tu pedido. Los campos marcados con asterisco (*) son
+                obligatorios.
+            </p>
+
+            <!-- Mensaje de éxito -->
+            <div id="mensaje-exito" class="mensaje-exito" role="status" tabindex="-1" hidden>
+                <p><strong>Consulta registrada.</strong> Gracias, te responderemos
+                    pronto al correo indicado.</p>
+            </div>
+
+            <!-- Resumen de errores (se llena con js/validacion.js) -->
+            <div id="resumen-errores" class="resumen-errores" role="alert" tabindex="-1" hidden>
+                <h3 id="titulo-resumen">Revisa los siguientes campos</h3>
+                <ul id="lista-errores"></ul>
+            </div>
+
+            <form id="form-consulta" class="formulario" action="#" method="post" novalidate>
+
+                <!-- DATOS PERSONALES -->
+                <fieldset>
+                    <legend>Tus datos</legend>
+
+                    <div class="campo">
+                        <label for="nombre">Nombres y apellidos *</label>
+                        <input type="text" id="nombre" name="nombre"
+                               required minlength="3" maxlength="60"
+                               pattern="[A-Za-zÁÉÍÓÚÜÑáéíóúüñ ]{3,60}"
+                               autocomplete="name"
+                               aria-describedby="ayuda-nombre error-nombre">
+                        <p class="ayuda" id="ayuda-nombre">Solo letras y espacios.</p>
+                        <p class="error" id="error-nombre"></p>
+                    </div>
+
+                    <div class="campo">
+                        <label for="correo">Correo electrónico *</label>
+                        <input type="email" id="correo" name="correo"
+                               required maxlength="80"
+                               autocomplete="email"
+                               aria-describedby="ayuda-correo error-correo">
+                        <p class="ayuda" id="ayuda-correo">Ejemplo: nombre@correo.com</p>
+                        <p class="error" id="error-correo"></p>
+                    </div>
+
+                    <div class="campo">
+                        <label for="telefono">Celular *</label>
+                        <input type="tel" id="telefono" name="telefono"
+                               required maxlength="9" inputmode="numeric"
+                               pattern="9[0-9]{8}"
+                               autocomplete="tel-national"
+                               aria-describedby="ayuda-telefono error-telefono">
+                        <p class="ayuda" id="ayuda-telefono">9 dígitos, empieza con 9. Ejemplo: 987654321</p>
+                        <p class="error" id="error-telefono"></p>
+                    </div>
+                </fieldset>
+
+                <!-- DATOS DEL PEDIDO -->
+                <fieldset>
+                    <legend>Tu pedido</legend>
+
+                    <div class="campo">
+                        <label for="producto">Producto de interés *</label>
+                        <select id="producto" name="producto" required
+                                aria-describedby="error-producto">
+                            <option value="">Selecciona un producto</option>
+                            <option value="arte-tierra">Arte de nuestra tierra (S/ 85.00)</option>
+                            <option value="esencia-andina">Esencia andina (S/ 65.00)</option>
+                            <option value="otro">Otro / consulta general</option>
+                        </select>
+                        <p class="error" id="error-producto"></p>
+                    </div>
+
+                    <div class="campo">
+                        <label for="cantidad">Cantidad *</label>
+                        <input type="number" id="cantidad" name="cantidad"
+                               required min="1" max="20" step="1" value="1"
+                               inputmode="numeric"
+                               aria-describedby="ayuda-cantidad error-cantidad">
+                        <p class="ayuda" id="ayuda-cantidad">Entre 1 y 20 unidades.</p>
+                        <p class="error" id="error-cantidad"></p>
+                    </div>
+
+                    <div class="campo">
+                        <label for="fecha">Fecha en que lo necesitas (opcional)</label>
+                        <input type="date" id="fecha" name="fecha"
+                               aria-describedby="ayuda-fecha error-fecha">
+                        <p class="ayuda" id="ayuda-fecha">No puede ser una fecha pasada.</p>
+                        <p class="error" id="error-fecha"></p>
+                    </div>
+
+                    <div class="campo">
+                        <label for="mensaje">Mensaje (opcional)</label>
+                        <textarea id="mensaje" name="mensaje" rows="4" maxlength="300"
+                                  aria-describedby="ayuda-mensaje"></textarea>
+                        <p class="ayuda" id="ayuda-mensaje">Máximo 300 caracteres.</p>
+                    </div>
+                </fieldset>
+
+                <!-- CONSENTIMIENTO -->
+                <div class="campo campo-check">
+                    <input type="checkbox" id="acepto" name="acepto" required
+                           aria-describedby="error-acepto">
+                    <label for="acepto">Acepto que MI NET use mis datos solo para
+                        responder esta consulta. *</label>
+                    <p class="error" id="error-acepto"></p>
+                </div>
+
+                <button type="submit" class="boton boton-enviar">Enviar consulta</button>
+
+            </form>
+
+            <p class="contacto-alterno">¿Prefieres escribirnos directamente?</p>
+
+            <a href="https://wa.me/51999999999"
+               class="boton boton-secundario"
+               target="_blank"
+               rel="noopener noreferrer">
+                Contáctanos por WhatsApp <span class="solo-lectores">(se abre en una pestaña nueva)</span>
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <!-- PIE DE PAGINA -->
+    <footer class="pie-pagina">
+
+        <a href="#inicio" class="logo">MI NET<span>.</span></a>
+
+        <p>Emprendimiento de productos de Puno, Perú.</p>
+
+        <p>
+            Fotografías: indicar aquí el autor o sitio de procedencia
+            y la licencia de portada.jpg y productos.jpg.
+        </p>
+
+        <p>© 2026 MI NET. Todos los derechos reservados.</p>
+
+    </footer>
+
+</body>
+
+</html>

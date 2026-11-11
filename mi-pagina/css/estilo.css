@@ -1,0 +1,359 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f7f5ef;
+    color: #292923;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+
+/* ==================================
+   ENCABEZADO Y NAVEGACION
+================================== */
+
+.encabezado {
+    min-height: 85px;
+    padding: 15px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f7f5ef;
+    border-bottom: 1px solid #e6e1d7;
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: -2px;
+}
+
+.logo span {
+    color: #a77a4e;
+}
+
+.navegacion {
+    display: flex;
+    gap: 35px;
+}
+
+.navegacion a {
+    font-size: 14px;
+    color: #55554d;
+    transition: color 0.3s;
+}
+
+.navegacion a:hover {
+    color: #a77a4e;
+}
+
+
+/* ==================================
+   PORTADA
+================================== */
+
+.portada {
+    min-height: 580px;
+    display: flex;
+    align-items: center;
+    padding: 70px 9%;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(20, 23, 18, 0.78),
+            rgba(20, 23, 18, 0.15)
+        ),
+        url("../img/portada.jpg") center / cover no-repeat;
+}
+
+.portada-contenido {
+    max-width: 600px;
+    color: white;
+}
+
+.etiqueta {
+    color: #a77a4e;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.portada .etiqueta {
+    color: #e5c49c;
+}
+
+h1 {
+    font-size: 62px;
+    line-height: 1.1;
+    letter-spacing: -2px;
+    margin-bottom: 25px;
+}
+
+.portada-contenido p {
+    max-width: 450px;
+    margin-bottom: 25px;
+    color: #eee;
+}
+
+.boton {
+    display: inline-block;
+    background-color: #f7f5ef;
+    color: #292923;
+    padding: 14px 25px;
+    border: 1px solid #f7f5ef;
+    font-size: 13px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.boton:hover {
+    background-color: #a77a4e;
+    border-color: #a77a4e;
+    color: white;
+}
+
+
+/* ==================================
+   NOSOTROS
+================================== */
+
+.nosotros {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 100px 25px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 38px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.nosotros > p:last-child {
+    color: #77766e;
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+
+/* ==================================
+   PRODUCTOS
+================================== */
+
+.productos {
+    padding: 60px 7% 100px;
+}
+
+.titulo-seccion {
+    margin-bottom: 35px;
+}
+
+.catalogo {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.producto {
+    background-color: #fff;
+    border: 1px solid #e9e4db;
+    padding-bottom: 20px;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.producto:hover {
+    transform: translateY(-5px);
+}
+
+.producto img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.producto-contenido {
+    padding: 22px;
+}
+
+h3 {
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.producto-contenido p {
+    color: #77766e;
+    font-size: 14px;
+}
+
+.precio {
+    font-weight: bold;
+    color: #292923 !important;
+    margin: 12px 0;
+}
+
+.enlace-producto {
+    display: inline-block;
+    margin-top: 10px;
+    border-bottom: 1px solid #a77a4e;
+    padding-bottom: 5px;
+    font-size: 13px;
+}
+
+
+/* ==================================
+   CONTACTO
+================================== */
+
+.contacto {
+    padding: 90px 20px;
+    text-align: center;
+    background-color: #eae5db;
+}
+
+.contacto p {
+    margin-bottom: 20px;
+    color: #77766e;
+}
+
+#contacto h2 {
+    color: #292923;
+}
+
+.contacto .boton {
+    background-color: #292923;
+    border-color: #292923;
+    color: white;
+}
+
+.contacto .boton:hover {
+    background-color: #a77a4e;
+    border-color: #a77a4e;
+}
+
+
+/* ==================================
+   PIE DE PAGINA
+================================== */
+
+.pie-pagina {
+    padding: 40px 7%;
+    background-color: #292923;
+    color: white;
+    text-align: center;
+}
+
+.pie-pagina .logo {
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.pie-pagina p {
+    color: #c5c1b7;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+
+/* ==================================
+   IDENTIFICADORES
+================================== */
+
+#inicio,
+#nosotros,
+#productos,
+#contacto {
+    scroll-margin-top: 20px;
+}
+
+
+/* ==================================
+   RESPONSIVE
+================================== */
+
+@media (max-width: 768px) {
+
+    .encabezado {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+    }
+
+    .navegacion {
+        gap: 18px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .portada {
+        min-height: 500px;
+        padding: 50px 25px;
+    }
+
+    h1 {
+        font-size: 43px;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+
+    .catalogo {
+        grid-template-columns: 1fr;
+    }
+
+    .producto img {
+        height: 330px;
+    }
+
+}
+
+@media (max-width: 400px) {
+
+    .navegacion {
+        gap: 12px;
+    }
+
+    .navegacion a {
+        font-size: 12px;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+}
+
+
+
+
+p {
+    color: blue;
+}
+
+.portada-contenido p {
+    color: red;
+}
